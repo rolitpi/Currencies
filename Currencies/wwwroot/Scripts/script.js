@@ -18,6 +18,10 @@ function Request(newDate) {
         if (this.readyState === 4) {
             if (this.status === 200) {
                 var currencies = JSON.parse(xhttp.response);
+                if (currencies.length < 1) {
+                    alert("К сожалению, по данной дате информация не найдена");
+                    return;
+                }
                 var table = $("#currency-table");
                 $("#currency-table tbody").html("");
                 table.append("<tr><td>Название</td><td>Номинал</td><td>Символьный код</td><td>Номерной код</td><td>Значение</td></tr>");
