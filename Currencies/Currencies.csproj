@@ -7,7 +7,7 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.App" />
-        <PackageReference Include="Telerik.UI.for.AspNet.Core" Version="2019.1.115" />
+        <PackageReference Include="Telerik.UI.for.AspNet.Core.Trial" Version="2019.1.220" />
     </ItemGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
