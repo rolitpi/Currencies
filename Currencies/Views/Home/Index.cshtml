@@ -1,0 +1,49 @@
+﻿<div>
+Данные по валютным курсам показаны за следующее число:
+@(  Html.Kendo()
+    .DatePicker()
+    .Name( "Date" )
+    .Format( "dd.MM.yyyy" )
+    .Value( DateTime.Now )
+    .Max( DateTime.Now )
+    .Events( e =>
+    {
+        e.Change( "change" );
+    })
+    .HtmlAttributes( new { style = "width: 50%" } ) )
+</div>
+
+<table id="currency-table">
+    <tr>
+        <td>Название</td>
+        <td>Номинал</td>
+        <td>Символьный код</td>
+        <td>Номерной код</td>
+        <td>Значение</td>
+    </tr>
+</table>
+
+<script src="~/Scripts/script.js"></script>
+<style>
+
+    #currency-table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #currency-table th {
+        text-align: left;
+        color: #ffffff;
+        background-color: #6091ca;
+        border: solid 1px #6091ca;
+    }
+
+    #currency-table td {
+        padding: 10px 5px;
+    }
+
+    #currency-table tr:hover {
+        background-color: black;
+        color: white;
+    }
+</style>
