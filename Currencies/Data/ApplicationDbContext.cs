@@ -1,13 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Currencies.Models;
+﻿using Currencies.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Currencies.Data
 {
-    public class ApplicationDbContext: DbContext
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext( DbContextOptions<ApplicationDbContext> options )
             : base( options )
